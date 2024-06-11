@@ -1,19 +1,98 @@
-body{
-    background-color: red;
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
 }
 
-/* header */
+/* partie header - en-tête de ma page web */
 header{
-    background-color: blue;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 74px;
-    border: 2px solid black;
+    border: 1.5px solid black;
+    padding: 0 291px 0 291px;
+
 }
 
+/* nav-container */
 .nav-container{
-    width: 1145px;
+    margin: 0;
+    padding: 0;
     height: 74px;
+    width: 1727px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.logo-container{
+    width: 290px;
+    height: 42px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    background-color: #fff;
+    width: 109px;
+    height: 42px;
+    border: 1px solid black;
+}
+
+.logo-name{
+    background-color: #fff;
+    width: 181px;
+    height: 26px;
+}
+
+/* div bouton */
+.button-container{
+    padding: 0;
+    display: flex;
+    width: 350px;
+    height: 58px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.connexion-btn{
+    background-color: #fff;
+    width: 108px;
+    height: 42px;
+    border: 1px solid black;
+    margin-right: 6px;
+    
+}
+
+.try-btn{
+    background-color: #fff;
+    width: 236px;
+    height: 42px;
+    border: 1px solid black;
+
+}
+
+/* ici c'est ma section principale */
+.section-main{
+    width: 1145px;
+    height: 892px;
+    border: 1px solid black;
+    padding: 146px 0 146px 0;
+    margin: auto;
+}
+
+.hero{
+
+}
 
 
 

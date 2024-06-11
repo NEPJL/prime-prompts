@@ -6,108 +6,111 @@
     <title>Intégration du zoning</title>
     <!-- css link -->
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <!-- header -->
-    <header>
-        <div class="nav-container">
-            <!-- logo -->
-            <div class="logo-container">
-                
+    <header class="header">
+        <nav class="header__nav">
+            <div class="nav__logo">
+                <img src="assets/logo.svg" alt="Logo" class="nav__logo-img">
+                <h3 class="nav__logo-title">PrimePrompts</h3>
             </div>
-            <!-- boutons -->
-            <div class="button-container">
-                <!-- bouton connexion -->
-                <div class="connexion-btn"></div>
-                <div class="try-btn"></div>
+            <div class="nav__auth">
+                <button type="button" class="nav__auth-button nav__auth-button--signin">Connexion</button>
+                <button type="button" class="nav__auth-button nav__auth-button--signup">Essayer PrimePrompts</button>
             </div>
-        </div>
+            <div class="nav__mobile-menu" id="navMobileMenu">
+                <img src="assets/menu.svg" alt="Menu">
+            </div>
+        </nav>
     </header>
-    <!-- section principale -->
-    <div class="section-main">
-        <!-- Premier titre -->
-        <div class="Desc-content">
-            <!-- Premier titre -->
-            <div class="title-one">
 
-            </div>
-            <!-- Deuxieme titre -->
-            <div class="title-two">
-
-            </div>
-            <!-- bouton / CTA -> Appel à l'action -->
-            <div class="cta-btn-desc-content"></div>
-        </div>
-        <!-- les bloc container -->
-        <div class="three-blocs-container">
-            <!-- bloc 1 -->
-            <div class="bloc-one-pink">
-
-            </div>
-            <!-- bloc 2 -->
-            <div class="bloc-two-yellow">
-
-            </div>
-            <!-- bloc 3 -->
-            <div class="bloc-content">
-
-            </div>
-        </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="mobileMenuClose">&times;</button>
+        <nav class="mobile-menu__nav">
+            <button type="button" class="nav__auth-button nav__auth-button--signin">Connexion</button>
+            <button type="button" class="nav__auth-button nav__auth-button--signup">Essayer PrimePrompts</button>
+        </nav>
     </div>
-    <!-- footer -->
-    <footer>
-        <div class="footer-container">
-            <!-- footer container -->
-            <div class="footer-container">
-                <!-- left-content -->
-                <div class="left-content">
-                    <!-- les éléments du content -->
-                    <div class="element-one">
+    
 
-                    </div>
-                    <div class="element-two">
-
-                    </div>
-                    <div class="element-three">
-
-                    </div>
+    <main class="main">
+        <div class="main__container">
+            <div class="main__hero">
+                <h1 class="main__hero-title">Organisez vos prompts IA <br />  <span>rapidement, efficacement.</span></h1>
+                <p class="main__hero-description">Une application simple pour gérer et retrouver <br />facilement vos prompts IA.</p>
+                <p class="main__hero-mobile-description">
+                    Gérez et retrouvez <br /> facilement <br /> vos prompts IA.
+                </p>
+                <button type="button" class="main__hero-button">Essayer PrimePrompts</button>
+            </div>
+    
+            <div class="main__features">
+                <div class="main__feature main__feature--add">
+                    <img src="assets/add.svg" alt="Ajout de Prompts" class="main__feature-icon">
+                    <h3 class="main__feature-title">Ajout de Prompts</h3>
+                    <p class="main__feature-description">
+                        Ajoutez de nouveaux prompts à votre <br />collection en quelques clics.
+                    </p>
                 </div>
-                <!-- right content -->
-                <div class="right-content">
-                    <!-- Content top -->
-                    <div class="element-content-top">
-                        <div class="logo-footer">
+                <div class="main__feature main__feature--sort">
+                    <img src="assets/sort.svg" alt="Classer par Catégorie" class="main__feature-icon">
+                    <h3 class="main__feature-title">Classer par Catégorie</h3>
+                    <p class="main__feature-description">
+                        Organisez les prompts en différentes <br />catégories pour une gestion facile.
+                    </p>
+                </div>
+                <div class="main__feature main__feature--manage">
+                    <img src="assets/manage.svg" alt="Gérer les Prompts" class="main__feature-icon">
+                    <h3 class="main__feature-title">Gérer les Prompts</h3>
+                    <p class="main__feature-description">
+                        Recherchez des prompts spécifiques, <br />modifiez ou supprimez-les.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
 
-                        </div>
-                        <div class="name-logo">
-
-                        </div>
-                    </div>
-                    <!--  bottom -->
-                    <div class="element-content-bottom">
-                        <div class="twitter-content">
-
-                        </div>
-                        <div class="inta-content">
-
-                        </div>
-                        <div class="linkedin-content">
-
-                        </div>
-                        <div class="face-content">
-
-                        </div>
-                        <div class="youtube-content">
-
-                        </div>
-                    </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__legal">
+                <p class="footer__legal-item">&copy; 2024 PrimePrompts Labs</p>
+                <p class="footer__legal-item"><a href="#">Mentions légales</a></p>
+                <p class="footer__legal-item"><a href="#">Politique de confidentialité</a></p>
+            </div>
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <img src="assets/logo.svg" alt="Logo" class="footer__logo-img">
+                    <h3 class="footer__logo-title">PrimePrompts</h3>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="footer__social-link">
+                        <img src="assets/socials/twitter.svg" alt="Twitter" class="footer__social-icon">
+                        <span class="footer__social-text">Twitter</span>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="footer__social-link">
+                        <img src="assets/socials/instagram.svg" alt="Instagram" class="footer__social-icon">
+                        <span class="footer__social-text">Instagram</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer__social-link">
+                        <img src="assets/socials/linkedin.svg" alt="LinkedIn" class="footer__social-icon">
+                        <span class="footer__social-text">LinkedIn</span>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="footer__social-link">
+                        <img src="assets/socials/facebook.svg" alt="Facebook" class="footer__social-icon">
+                        <span class="footer__social-text">Facebook</span>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="footer__social-link">
+                        <img src="assets/socials/youtube.svg" alt="YouTube" class="footer__social-icon">
+                        <span class="footer__social-text">YouTube</span>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    
-
-    
+    <script src="js/main.js"></script>
 </body>
 </html>
