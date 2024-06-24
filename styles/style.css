@@ -1,98 +1,200 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
     box-sizing: border-box;
+    font-family: "roboto", serif, sans-serif;
 }
 
-/* partie header - en-tête de ma page web */
-header{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ici on retrouve le header */
+.header {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-nav {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+    max-width: 1120px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav__logo-title {
+    font-size: 22px;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-auth-btn {
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 300ms;
+    font-size: 18px;
+    border: none;
+    
+    cursor: pointer;
+}
+
+.nav-btn-signin {
+    background-color: transparent;
+}
+
+.nav--btn-signin:hover {
+    background-color: #ccc;
+
+}
+
+.nav-btn-signup {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+.nav-btn-signup:hover {
+    background-color: rgba(var(--primary-color), 0.6);
+}
+
+/* section principal */
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 74px;
-    border: 1.5px solid black;
-    padding: 0 291px 0 291px;
-
-}
-
-/* nav-container */
-.nav-container{
-    margin: 0;
-    padding: 0;
-    height: 74px;
-    width: 1727px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo-container{
-    width: 290px;
-    height: 42px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo{
-    background-color: #fff;
-    width: 109px;
-    height: 42px;
-    border: 1px solid black;
-}
-
-.logo-name{
-    background-color: #fff;
-    width: 181px;
-    height: 26px;
-}
-
-/* div bouton */
-.button-container{
-    padding: 0;
-    display: flex;
-    width: 350px;
-    height: 58px;
-    border: 1px solid black;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-.connexion-btn{
-    background-color: #fff;
-    width: 108px;
-    height: 42px;
-    border: 1px solid black;
-    margin-right: 6px;
+    max-width: 1120px;
+    justify-content: space-around;
+    gap: 30px;
     
+    padding: 20px 10px;
 }
 
-.try-btn{
-    background-color: #fff;
-    width: 236px;
-    height: 42px;
-    border: 1px solid black;
-
+.main__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
 }
 
-/* ici c'est ma section principale */
-.section-main{
-    width: 1145px;
-    height: 892px;
-    border: 1px solid black;
-    padding: 146px 0 146px 0;
-    margin: auto;
+.main__hero-title {
+    font-size: var(--headline-font-size);
+    font-weight: var(--headline-font-weight);
 }
 
-.hero{
+.main__hero-description,
+.main__hero-mobile-description {
+    font-size: var(--subheadline-font-size);
+    font-weight: var(--subheadline-font-weight);
+}
 
+.main__hero-mobile-description {
+    display: none;
+}
+
+.main__hero-button {
+    padding: 10px 15px;
+    font-size: var(--body-font-size);
+    background-color: rgb(var(--blue-color));
+    color: rgb(var(--secondary-color));
+    border: none;
+    border-radius: 10px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.main__hero-button:hover {
+    background-color: rgba(var(--blue-color), 0.8);
+}
+
+.main__features {
+    width: 100%;
+
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main__feature {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    color: rgb(var(--secondary-color));
+}
+
+.main__feature-icon {
+    max-width: 50px; 
+    height: auto;
+}
+
+.main__feature-title {
+    font-size: var(--subheadline-font-size);
+}
+
+.main__feature-description {
+    font-size: var(--body-font-size);
+}
+
+.main__feature--add {
+    background-color: rgb(var(--red-color));
+}
+
+.main__feature--sort {
+    background-color: rgb(var(--yellow-color));
+}
+
+.main__feature--manage {
+    background-color: rgb(var(--green-color));
 }
 
 
+.main__hero-title,
+.main__hero-description,
+.main__hero-mobile-description,
+.main__hero-button,
+.main__feature {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-out;
+}
 
+.main__feature {
+    transform: translateY(20px);
+}
+
+
+ 
